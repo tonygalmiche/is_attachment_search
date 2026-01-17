@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Ajout du champ de recherche dans la vue recherche des contacts -->
+    <record id="view_res_partner_filter_attachment_search" model="ir.ui.view">
+        <field name="name">res.partner.search.attachment</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="is_attachment_content" string="Contenu pièces jointes"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
